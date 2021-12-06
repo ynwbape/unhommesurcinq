@@ -1,0 +1,18 @@
+//
+// tables.scss
+// Extended from Bootstrap
+//
+
+.table > :not(:first-child) {
+  border-top: 0;
+}
+
+// Alignment
+
+.table-align-middle {
+
+  thead > tr > th,
+  tbody > tr > td {
+    vertical-align: middle;
+  }
+}
