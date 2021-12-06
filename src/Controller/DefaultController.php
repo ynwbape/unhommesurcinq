@@ -15,4 +15,12 @@ class DefaultController extends AbstractController
     {
         return $this->render('home.html.twig');
     }
+
+    /**
+     * @Route("/landkit", name="landkit")
+     */
+    public function landkit(): Response
+    {
+        return $this->render('landkit.html.twig');
+    }
 }
