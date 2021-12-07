@@ -1,12 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Nos ressources gratuites — Un Homme sur Cinq{% endblock %}
+{% block title %}Nos ressources offertes — Un Homme sur Cinq{% endblock %}
 
-{# {% block body_class %}bg-light{% endblock %} #}
 
 {% block body %}
 
-    <section class="pt-10 pt-md-14 pb-12 pb-md-15 overlay overlay-primary overlay-80" style="background-image: url({{ absolute_url(asset('images/img-landkit/illustrations/illustration-3.png')) }});">
+    <section class="mb-10 pt-10 pt-md-14 pb-12 pb-md-15 overlay overlay-primary overlay-80" style="background-image: url({{ absolute_url(asset('images/img-landkit/illustrations/illustration-3.png')) }});">
 
         <!-- Content -->
         <div class="container">
@@ -15,15 +14,15 @@
 
                     <!-- Heading -->
                     <h1 class="display-1 fw-bold text-white mb-6 mt-n3">
-                        Ressources offertes à récupérer
+                        Ressources offertes
                     </h1>
-                    <a class="btn btn-pill btn-white shadow lift mx-2" href="#formation-7-jours">
+                    <a class="btn btn-pill btn-white shadow lift m-2" href="#formation-7-jours">
                         <i class="fe fe-mail me-2"></i>
-                        Une formation par email
+                        Formez-vous par email
                     </a>
-                    <a class="btn btn-pill btn-white shadow lift mx-2" href="#livres-resumes">
+                    <a class="btn btn-pill btn-white shadow lift m-2" href="#livres-resumes">
                         <i class="fe fe-book-open me-2"></i>
-                        Un résumé de livre
+                        Résumé de livre
                     </a>
                 </div>
             </div> <!-- / .row -->
@@ -40,24 +39,110 @@
         </div>
     </section>
 
-    <section id="livres-resumes">
+    <section id="formation-7-jours" class="pt-9">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-10 col-lg-8 text-center">
-                    <span class="badge rounded-pill bg-primary-soft mb-3">
-                        <span class="h6 text-uppercase">Droit à l’essentiel</span>
-                    </span>
-                    {#
                     <h1>
-                        Découvrez les meilleurs livres <span class="text-primary">en version résumée</span>.
+                        Formation par email.
                     </h1>
                     <p class="lead text-gray-700 mb-7 mb-md-9">
-                        Nous résumons gratuitement pour vous les meilleurs ouvrages consacrés au sujet.
+                        Prolongez vos pénétration en maîtrisant votre excitation.
                     </p>
-                    #}
+                    <span class="badge rounded-pill bg-primary-soft mb-3">
+                        <span class="h6 text-uppercase">Formation offerte</span>
+                    </span>
                 </div><!-- .col -->
             </div><!-- .row -->
+        </div> <!-- .container -->
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
 
+                    <div class="card mb-3 shadow-light-lg">
+                        <div class="row g-0">
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title display-4">Maîtriser votre excitation</h3>
+                                    <p class="text-muted">
+                                        Par Éric Air.
+                                    </p>
+                                    <p class="card-text lead text-muted">7 jours pour apprendre comment la maîtriser.</p>
+                                    <div class="card-text">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-6">
+                                                <div class="d-flex">
+                                                    <div class="badge badge-rounded-circle bg-success-soft mt-1 me-4">
+                                                        <i class="fe fe-check"></i>
+                                                    </div>
+                                                    <p class="text-success">
+                                                        Les leviers d’action
+                                                    </p>
+                                                </div><!-- .d-flex -->
+                                                <div class="d-flex">
+                                                    <div class="badge badge-rounded-circle bg-success-soft mt-1 me-4">
+                                                        <i class="fe fe-check"></i>
+                                                    </div>
+                                                    <p class="text-success">
+                                                        Votre corps expliqué
+                                                    </p>
+                                                </div><!-- .d-flex -->
+                                            </div><!-- .col -->
+                                            <div class="col-12 col-lg-6">
+                                                <div class="d-flex">
+                                                    <div class="badge badge-rounded-circle bg-success-soft mt-1 me-4">
+                                                        <i class="fe fe-check"></i>
+                                                    </div>
+                                                    <p class="text-success">
+                                                        Rédigé par un sexothérapeute
+                                                    </p>
+                                                </div><!-- .d-flex -->
+                                                <div class="d-flex">
+                                                    <div class="badge badge-rounded-circle bg-success-soft mt-1 me-4">
+                                                        <i class="fe fe-check"></i>
+                                                    </div>
+                                                    <p class="text-success">
+                                                        Chaque matin dans vos emails
+                                                    </p>
+                                                </div><!-- .d-flex -->
+                                            </div><!-- .col -->
+                                        </div><!-- .row -->
+                                    </div><!-- .card-text -->
+                                    <p class="card-text text-muted ">
+                                        <a href="#" class="btn btn-primary">Débuter la formation</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="#">
+                                    <img src="{{ asset('images/formation/presentation-formation-7-jours.jpg') }}" class="img-fluid rounded-start" alt="...">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div> <!-- .container -->
+    </section>
+
+    <section id="livres-resumes">
+        <div class="container mt-10 pt-10">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8 text-center">
+                    <h1>
+                        Résumé de livre.
+                    </h1>
+                    <p class="lead text-gray-700 mb-7 mb-md-9">
+                        Gagnez de nombreuses heures de lecture avec nos résumés.
+                    </p>
+                    <span class="badge rounded-pill bg-primary-soft mb-3">
+                        <span class="h6 text-uppercase">Le condensé</span>
+                    </span>
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div> <!-- .container -->
+        <div class="container">
             <div class="row align-items-center py-9 mt-2 mb-9">
                 <div class="col-12 col-md-3">
                     <a class="mb-8 mb-md-0" href="#">
@@ -73,14 +158,13 @@
                     <p class="lead">
                         Découvrez les mystères de l'éjaculation, et les manières de résoudre l’éjaculation précoce.
                     </p>
-                    <p>
+                    <p class="text-muted">
                         <a href="#" class="btn btn-primary">Lire le résumé</a>
-                        <span class="text-muted">ou <a href="#" class="text-reset text-decoration-underline">récupérer la version pdf</a></span>.
+                        ou
+                        <a href="#" class="text-reset text-decoration-underline">récupérer la version pdf</a>.
                     </p>
                 </div><!-- .col -->
             </div><!-- .row -->
-
-
         </div><!-- .container -->
     </section>
 
