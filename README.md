@@ -1,5 +1,10 @@
 
 
+# Pour développer
+
+    symfony server:start
+    yarn encore dev-server
+
 
 
 # Assets
