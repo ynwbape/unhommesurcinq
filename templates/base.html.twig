@@ -7,7 +7,7 @@
         <title>{% block title %}Un homme sur Cinq{% endblock %}</title>
 
         <!-- Favicon -->
-        <!-- <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon" /> -->
+        <link rel="shortcut icon" href="{{ asset('images/favicon/favicon.ico') }}" type="image/x-icon">
 
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
@@ -95,7 +95,7 @@
                                     <i class="fe fe-phone-call"></i>
                                 </div>
                                 <p>
-                                    <a href="{{ path('appel_gratuit') }}" class="text-reset">Réservez un appel</a>
+                                    <a href="{{ path('appel_gratuit') }}" class="text-reset">Réservez un appel</a>
                                 </p>
                             </li>
                             <li class="d-flex">
