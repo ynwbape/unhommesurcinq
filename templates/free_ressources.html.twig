@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos ressources gratuites — Un Homme sur Cinq{% endblock %}
+
+{# {% block body_class %}bg-light{% endblock %} #}
+
+{% block body %}
+
+    <section class="pt-10 pt-md-14 pb-12 pb-md-15 overlay overlay-primary overlay-80" style="background-image: url({{ absolute_url(asset('images/img-landkit/illustrations/illustration-3.png')) }});">
+
+        <!-- Content -->
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 text-center">
+
+                    <!-- Heading -->
+                    <h1 class="display-1 fw-bold text-white mb-6 mt-n3">
+                        Ressources offertes à récupérer
+                    </h1>
+                    <a class="btn btn-pill btn-white shadow lift mx-2" href="#formation-7-jours">
+                        <i class="fe fe-mail me-2"></i>
+                        Une formation par email
+                    </a>
+                    <a class="btn btn-pill btn-white shadow lift mx-2" href="#livres-resumes">
+                        <i class="fe fe-book-open me-2"></i>
+                        Un résumé de livre
+                    </a>
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+        <!-- Shape -->
+        <div class="position-absolute right-0 bottom-0 left-0">
+
+            <!-- Shape -->
+            <div class="position-relative shape shape-bottom shape-fluid-x text-white">
+                <svg viewBox="0 0 2880 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M720 125L2160 0h720v250H0V125h720z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section id="livres-resumes">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8 text-center">
+                    <span class="badge rounded-pill bg-primary-soft mb-3">
+                        <span class="h6 text-uppercase">Droit à l’essentiel</span>
+                    </span>
+                    {#
+                    <h1>
+                        Découvrez les meilleurs livres <span class="text-primary">en version résumée</span>.
+                    </h1>
+                    <p class="lead text-gray-700 mb-7 mb-md-9">
+                        Nous résumons gratuitement pour vous les meilleurs ouvrages consacrés au sujet.
+                    </p>
+                    #}
+                </div><!-- .col -->
+            </div><!-- .row -->
+
+            <div class="row align-items-center py-9 mt-2 mb-9">
+                <div class="col-12 col-md-3">
+                    <a class="mb-8 mb-md-0" href="#">
+                        <img src="{{ asset('images/livres/Osez-les-conseils-resume.jpeg') }}" alt="Osez… les conseils d’un sexologue pour maîtriser votre éjaculation" class="screenshot img-fluid mw-md-110 float-end me-md-6 mb-6 mb-md-0">
+                    </a>
+                </div><!-- .col -->
+
+                <div class="col-12 col-md-7">
+                    <h3 class="display-4">Osez… les conseils d’un sexologue pour maîtriser votre éjaculation</h3>
+                    <p class="mb-5 mb-md-7 text-muted">
+                        Par le Dr Marc Bonnard.
+                    </p>
+                    <p class="lead">
+                        Découvrez les mystères de l'éjaculation, et les manières de résoudre l’éjaculation précoce.
+                    </p>
+                    <p>
+                        <a href="#" class="btn btn-primary">Lire le résumé</a>
+                        <span class="text-muted">ou <a href="#" class="text-reset text-decoration-underline">récupérer la version pdf</a></span>.
+                    </p>
+                </div><!-- .col -->
+            </div><!-- .row -->
+
+
+        </div><!-- .container -->
+    </section>
+
+{% endblock %}

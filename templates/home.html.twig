@@ -1,5 +1,49 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Home</h1>
+
+    <section class="pt-4 pt-md-11">
+        {#
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 pt-3">
+                    Recevoir mes emails qui aident plus 3 000 hommes chaque semaine.
+                </div>
+                <div class="col-md-3">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control form-control-sm" id="floatingInput" aria-describedby="emailHelpInline" placeholder="name@example.com">
+                        <label for="floatingInput">Votre Email</label>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-sm btn-outline-secondary">Je m’abonne</button>
+                </div>
+            </div>
+        </div>
+        #}
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-12 col-md-7 col-lg-6">
+                    <h1 class="display-3">
+                        Prolongez vos rapports sexuels
+                    </h1>
+                    <p class="lead text-muted mb-6 mb-lg-8">
+                        Téléconsultation et traitement de l’<mark>éjaculation précoce</mark>.
+                    </p>
+                    <a href="{{ path('appel_gratuit') }}" class="btn btn-lg btn-primary">
+                        Appelez un sexothérapeute <i class="fe fe-arrow-right"></i>
+                    </a>
+                    <p class="text-muted mb-6 mb-lg-8 pt-2">
+                        <em><i class="fe fe-phone-call"></i> Appel d’information gratuit sans engagement</em>
+                    </p>
+                </div><!-- .col -->
+
+                <div class="col-12 col-md-5 col-lg-6">
+                    <img src="{{ asset('images/img-landkit/illustrations/illustration-2.png') }}" class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0" alt="Éric Air">
+                </div><!-- .col -->
+
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </section>
 {% endblock %}

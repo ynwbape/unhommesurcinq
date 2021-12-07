@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>{% block title %}Un homme sur Cinq{% endblock %}</title>
+
+        <!-- Favicon -->
+        <!-- <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon" /> -->
+
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -13,7 +17,162 @@
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
-    <body>
+    <body class="{% block body_class %}{% endblock %}">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <!-- Brand -->
+                <a class="navbar-brand" href="{{ path('home') }}">
+                    <img src="{{ asset('images/logos/Un homme sur cinq.png') }}" class="navbar-brand-img" alt="Un homme sur cinq">
+                </a>
+            
+                <!-- Toggler -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <!-- Collapse -->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+            
+                    <!-- Toggler -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fe fe-x"></i>
+                    </button>
+            
+                    <!-- Navigation -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('about') }}">
+                                Présentation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('ressources_gratuites') }}">
+                                Kit gratuit
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('products') }}">
+                                Produits et consultations
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('home') }}">
+                                <span class="fe fe-user"></span>
+                                Mon compte
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
         {% block body %}{% endblock %}
+
+        <footer class="py-8 py-md-11 bg-dark text-white">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-6 col-md-4 mb-6">
+                        <p class="mb-6">
+                            <a href="{{ path('home') }}">
+                                <img src="{{ asset('images/logos/Un homme sur cinq.png') }}" alt="Un homme sur cinq" class="footer-brand img-fluid mb-2" width="150">
+                            </a>
+                        </p>
+                        <h4 class="h2">Nos conseils directement dans vos emails</h4>
+                        <form>
+                            <div class="form-group py-3">
+                                <label for="inputEmailFooter" class="form-label">Votre addresse Email</label>
+                                <input type="email" class="form-control form-control-xs" id="inputEmailFooter" aria-describedby="inputEmailFooterHelp">
+                            </div>
+                            <button type="submit" class="btn btn-secondary btn-sm">Rejoindre la newsletter</button>
+                            <div id="inputEmailFooterHelp" class="form-text">Nous ne communiquerons jamais votre adresse à quelqu’un d’autre.</div>
+                        </form>
+                    </div><!-- .col -->
+
+                    <div class="col-6 col-md-4">
+                        <h4 class="h4 text-uppercase">Vous avez une question ?</h4>
+                        <ul class="list-unstyled mb-7">
+                            <li class="d-flex">
+                                <div class="badge mt-1">
+                                    <i class="fe fe-phone-call"></i>
+                                </div>
+                                <p>
+                                    <a href="{{ path('appel_gratuit') }}" class="text-reset">Réservez un appel</a>
+                                </p>
+                            </li>
+                            <li class="d-flex">
+                                <div class="badge mt-1">
+                                    <i class="fe fe-mail"></i>
+                                </div>
+                                <p>
+                                    <a href="{{ path('contact') }}" class="text-reset">Contactez-nous</a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div><!-- .col -->
+
+                    <div class="col-6 col-md-2">
+                        <ul class="list-unstyled mb-6 mb-md-8 mb-lg-0">
+                            <li class="mb-3">
+                                <a href="{{ path('home') }}" class="text-reset">
+                                    Accueil
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="{{ path('about') }}" class="text-reset">
+                                    Présentation
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="{{ path('ressources_gratuites') }}" class="text-reset">
+                                    Kit gratuit
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="{{ path('home') }}" class="text-reset">
+                                    Produits et consultations
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- .col -->
+
+                    <div class="col-6 col-md-2">
+                        <ul class="list-unstyled mb-6 mb-md-8 mb-lg-0">
+                            <li class="mb-3">
+                                <a href="{{ path('home') }}" class="text-reset">
+                                    Articles
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="{{ path('home') }}" class="text-reset">
+                                    Témoignages
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="{{ path('home') }}" class="text-reset">
+                                    Contacts Presse
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="{{ path('home') }}" class="text-reset">
+                                    Mentions légales
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="{{ path('home') }}" class="text-reset">
+                                    Plan du site
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="{{ path('home') }}" class="text-reset">
+                                    Connectez-vous
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- .col -->
+                </div> <!-- / .row -->
+            </div> <!-- / .container -->
+        </footer>
     </body>
 </html>
