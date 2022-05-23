@@ -3,7 +3,7 @@
 # Pour développer
 
     symfony server:start
-    yarn encore dev-server
+    yarn watch
 
 
 
