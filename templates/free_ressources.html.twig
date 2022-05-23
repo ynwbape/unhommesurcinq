@@ -2,6 +2,11 @@
 
 {% block title %}Nos ressources offertes — Un Homme sur Cinq{% endblock %}
 
+{# Faire plusieurs CSS spécifiques #}
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('test') }}
+{% endblock %}
 
 {% block body %}
     <section id="formation-7-jours" class="pt-9">
